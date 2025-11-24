@@ -1,0 +1,14 @@
+{
+  "name": "com.dxmxntxr.ropesimulation",
+  "version": "0.0.1",
+  "displayName": "Rope Simulation",
+  "description": "Rope Simulation",
+  "unity": "2021.3",
+  "samples": [
+  {
+    "displayName": "Rope Example",
+    "description": "Basic rope simulation example",
+    "path": "Samples~/LineRendererVisualization"
+  }
+]
+}
