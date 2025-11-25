@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
-public static class UnityModelExtensions
+namespace GreenLibrary.UnityModel
 {
-    public static TransformModel ToModel(this Transform transform)
+    public static class UnityModelExtensions
     {
-        return new TransformModel(transform);
+        public static TransformModel ToModel(this Transform transform)
+        {
+            return new TransformModel(transform);
+        }
     }
 }

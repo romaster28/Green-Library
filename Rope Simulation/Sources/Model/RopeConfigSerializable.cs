@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace DR.RopeSimulation
+namespace GreenLibrary.RopeSimulation
 {
     [Serializable]
     public class RopeConfigSerializable : IRopeConfig

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DR.RopeSimulation
+namespace GreenLibrary.RopeSimulation
 {
     public interface IRopeConfig
     {

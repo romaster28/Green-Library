@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DR.RopeSimulation
+namespace GreenLibrary.RopeSimulation
 {
     public class RopeSimulation
     {

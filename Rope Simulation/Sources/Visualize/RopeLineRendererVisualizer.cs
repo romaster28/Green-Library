@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace DR.RopeSimulation.Example
+namespace GreenLibrary.RopeSimulation.Example
 {
     [RequireComponent(typeof(LineRenderer))]
     public class RopeLineRendererVisualizer : MonoBehaviour

@@ -1,43 +1,46 @@
 ﻿using System;
 using UnityEngine;
 
-public class CollisionHandler
+namespace GreenLibrary.CharacterController
 {
-    private readonly LayerMask _ground;
-    private readonly float _groundCheckDistance;
-    private readonly float _forwardSurfaceDistance = .5f;
-    private Vector3 _point;
-
-    public CollisionHandler(LayerMask ground, float groundCheckDistance)
+    public class CollisionHandler
     {
-        if (groundCheckDistance < 0)
-            throw new ArgumentOutOfRangeException(nameof(groundCheckDistance));
+        private readonly LayerMask _ground;
+        private readonly float _groundCheckDistance;
+        private readonly float _forwardSurfaceDistance = .5f;
+        private Vector3 _point;
 
-        _ground = ground;
-        _groundCheckDistance = groundCheckDistance;
-    }
+        public CollisionHandler(LayerMask ground, float groundCheckDistance)
+        {
+            if (groundCheckDistance < 0)
+                throw new ArgumentOutOfRangeException(nameof(groundCheckDistance));
 
-    public void UpdatePoint(Vector3 point)
-    {
-        _point = point;
-    }
+            _ground = ground;
+            _groundCheckDistance = groundCheckDistance;
+        }
 
-    public bool CheckGrounded()
-    {
-        return Physics.CheckSphere(_point, _groundCheckDistance, _ground);
-    }
+        public void UpdatePoint(Vector3 point)
+        {
+            _point = point;
+        }
 
-    public Vector3 GetNormal(Vector3 forward)
-    {
-        Vector3 resultNormal = Vector3.up;
-        forward = forward.normalized;
+        public bool CheckGrounded()
+        {
+            return Physics.CheckSphere(_point, _groundCheckDistance, _ground);
+        }
 
-        if (Physics.Raycast(_point, Vector3.down, out RaycastHit groundHit, _groundCheckDistance))
-            resultNormal = groundHit.normal;
+        public Vector3 GetNormal(Vector3 forward)
+        {
+            Vector3 resultNormal = Vector3.up;
+            forward = forward.normalized;
 
-        if (Physics.Raycast(_point, forward, out RaycastHit forwardHit, _forwardSurfaceDistance))
-            resultNormal = forwardHit.normal;
+            if (Physics.Raycast(_point, Vector3.down, out RaycastHit groundHit, _groundCheckDistance))
+                resultNormal = groundHit.normal;
 
-        return resultNormal;
+            if (Physics.Raycast(_point, forward, out RaycastHit forwardHit, _forwardSurfaceDistance))
+                resultNormal = forwardHit.normal;
+
+            return resultNormal;
+        }
     }
 }
