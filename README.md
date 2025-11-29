@@ -4,12 +4,19 @@ Green Library - it's independent game packages library (mostly for Unity). The m
 
 ## Installing
 
+Link Install: Package Manager > "+" > Install package from git URL...
+
 You can inject just one by adding package in your project (links of packages below) or...
+
 Just install all at once with Green Library Package! - 
 
-(get description of any package by click on the title)
+1. Unity Model - 
+2. Character Controller - 
+3. Rope Simulation - 
+4. Pendulum Simulation - 
 
-1. Unity Model
-2. Character Controller
-3. Rope Simulation
-4. Pendulum Simulation
+| Package | Link | Version | Info |
+|:------|:-----------|-------:|:--------:|
+| **[Unity Model](./Unity%20Model)** | `https://github.com/romaster28/Green-Library.git?path=/Unity Model` | 1.0.0 | Расширенная типографика |
+| **UI Tools** | `https://github.com/romaster28/Green-Library.git?path=/UI Tools` | 1.2.0 | Инструменты интерфейса |
+| **Utilities** | `https://github.com/romaster28/Green-Library.git?path=/Utilities` | 2.1.0 | Вспомогательные функции |
