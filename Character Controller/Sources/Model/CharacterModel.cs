@@ -24,6 +24,7 @@ namespace GreenLibrary.CharacterController
         }
 
         public IReadOnlyTransform Transform => _transform;
+        public Vector3 Velocity => _velocity;
 
         public void RotateToAngle(float angle)
         {
